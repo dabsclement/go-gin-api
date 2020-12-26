@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-pg/pg/v10"
+	"github.com/go-pg/pg/v9"
 
 	controllers "go-gin-api/controllers"
 )
@@ -13,9 +13,9 @@ import (
 func Connect() *pg.DB {
 	opts := &pg.Options{
 		User:     "clem",
-		Password: "postgres",
+		Password: "1234",
 		Addr:     "localhost:5432",
-		Database: "go-gin-api",
+		Database: "go_gin",
 	}
 
 	var db *pg.DB = pg.Connect(opts)
